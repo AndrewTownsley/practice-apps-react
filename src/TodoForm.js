@@ -24,7 +24,7 @@ const TodoForm = ({addTask}) => {
         type="text" 
         placeholder="add task..." 
       />
-      <button onClick={addTodo}>+ Add</button>
+      <button addTask={addTask} onClick={addTodo}>+ Add</button>
     </form>
   )
 }

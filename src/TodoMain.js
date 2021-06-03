@@ -36,7 +36,7 @@ const TodoMain = () => {
   return (
     <>
       <TodoHeader/>
-      <TodoForm setTodos={setTodos}/>
+      <TodoForm addTask={addTask} setTodos={setTodos}/>
       <TodoList toggleComplete={toggleComplete} filterComplete={filterComplete} todos={todos}/*todos is from our useState array. It will be passed to the component file where we can use it there.*/ />
     </>
   )
