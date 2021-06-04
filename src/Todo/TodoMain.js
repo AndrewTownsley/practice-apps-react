@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import data from "./data.json";
+import data from "../data.json";
 // Components
 import TodoHeader from "./TodoHeader";
 import TodoList from "./TodoList";

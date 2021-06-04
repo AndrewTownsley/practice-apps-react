@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import TodoMain from './TodoMain';
+import ColorPicker from "./ColorPicker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodoMain />
+    <ColorPicker />
   </React.StrictMode>,
   document.getElementById('root')
 );
