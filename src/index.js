@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ColorPicker from "./ColorPicker";
+import MainCarousel from "./MainCarousel";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ColorPicker />
+    <MainCarousel />
   </React.StrictMode>,
   document.getElementById('root')
 );
