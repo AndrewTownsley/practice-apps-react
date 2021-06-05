@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import MainCarousel from "./MainCarousel";
+import RecipeApp from "./RecipeApp";
 
 ReactDOM.render(
   <React.StrictMode>
-    <MainCarousel />
+    <RecipeApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
