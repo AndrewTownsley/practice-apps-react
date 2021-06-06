@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import RecipeApp from "./RecipeApp";
+import RandomUser from "./RandomUser";
 
 ReactDOM.render(
   <React.StrictMode>
-    <RecipeApp />
+    <RandomUser />
   </React.StrictMode>,
   document.getElementById('root')
 );
