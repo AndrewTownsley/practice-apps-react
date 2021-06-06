@@ -12,7 +12,10 @@ body {
   align-items: center;
 }
 
-.slide {
-  border: 1px solid #555;
-  border-radius: 10px;
+.show-modal {
+  display: block;
+}
+
+.hide-modal {
+  display: none;
 }
