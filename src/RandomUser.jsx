@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, Fragment } from 'react';
 import axios from 'axios';
 //Components
 import UserButton from './UserButton';
@@ -13,8 +13,8 @@ const RandomUser = () => {
     setLoading(true);
     axios.get("https://randomuser.me/api")
       .then((response) => {
-        console.log(response);
-        setUserData(response.data.results);//the daa response form the API is within the DATA object, and the user data that we want is within that object in an object called 'results'
+        console.log(response.data.results);
+        setUserData(response.data.results);//the data response form the API is within the DATA object, and the user data that we want is within that object in an object called 'results'
       }).catch((error) => {// if the API doesnt respond, do these things>>>>>
         console.log(error);
         setLoading(true);
@@ -24,13 +24,19 @@ const RandomUser = () => {
   }
 
   return (
-    <div>
+    <div className="App">
       <h1>Random User Generator</h1>
       <UserButton isActive={activeUser} clicked={generateUser} />
         {loading ? (<h1>loading...</h1>) : 
-        <div className="user">
-        
-        </div>}
+        (<div className="app-user">
+          {userData.map((user, index) => {
+            return (
+            <Fragment  key={user.id}>
+              <img src={user.picture.large} alt="random user" />
+            </Fragment>
+              )
+          })}
+        </div>)}
     </div>
   )
 }
