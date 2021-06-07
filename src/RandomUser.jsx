@@ -35,13 +35,15 @@ const RandomUser = () => {
   return (
     <div className="App">
       <h1 className="app-title">Random User Generator</h1>
-      <button onClick={openModal}>Open Modal</button>
+      
       <Modal 
+        userData={userData}
+        generateUser={generateUser}
         openModal={openModal}
         closeModal={closeModal}
         showModal={showModal}
-        setShowModal={setShowModal}
       />
+      
       <button onClick={generateUser}>Next User</button>
         {loading ? (<h1>loading...</h1>) : 
         (<div className="app-user">
@@ -51,7 +53,9 @@ const RandomUser = () => {
                 className="app-user-card"  
                 key={user.login.uuid}
                 user={user}
-                openModal={openModal} />
+                openModal={openModal}
+                closeModal={closeModal}
+                />
               )
           })}
         </div>)}
