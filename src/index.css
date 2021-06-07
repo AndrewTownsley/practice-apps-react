@@ -19,3 +19,7 @@ body {
 .hide-modal {
   display: none;
 }
+
+.modal-window {
+  outline: 2px solid white;
+}

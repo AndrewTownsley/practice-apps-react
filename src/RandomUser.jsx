@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 //Components
 import UserCard from "./UserCard";
-import Modal from "./Modal";
 
 const RandomUser = () => { 
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [showModal, setShowModal] = useState(false);
 
   const amount = 10;
 
@@ -25,25 +23,13 @@ const RandomUser = () => {
       })
   }
 
-  const openModal = (e) => {
-    setShowModal(true);
-  }
-  const closeModal = (e) => {
-    setShowModal(false);
-  }
+ 
 
   return (
     <div className="App">
       <h1 className="app-title">Random User Generator</h1>
-      
-      <Modal 
-        userData={userData}
-        generateUser={generateUser}
-        openModal={openModal}
-        closeModal={closeModal}
-        showModal={showModal}
-      />
-      
+
+
       <button onClick={generateUser}>Next User</button>
         {loading ? (<h1>loading...</h1>) : 
         (<div className="app-user">
@@ -53,8 +39,10 @@ const RandomUser = () => {
                 className="app-user-card"  
                 key={user.login.uuid}
                 user={user}
-                openModal={openModal}
-                closeModal={closeModal}
+                // openModal={openModal}
+                // closeModal={closeModal}
+                userData={userData}
+                generateUser={generateUser}
                 />
               )
           })}

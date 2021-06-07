@@ -1,6 +1,17 @@
+import React, { useState } from 'react';
+import Modal from "./Modal";
+
+const UserCard = ({ user, userData, generateUser}) => {
+
+  const [showModal, setShowModal] = useState(false);
 
 
-const UserCard = ({ user, userData, openModal, closeModal, showModal, generateUser}) => {
+  const openModal = (e) => {
+    setShowModal(true);
+  }
+  const closeModal = (e) => {
+    setShowModal(false);
+  }
 
   return (
     <>
@@ -12,13 +23,13 @@ const UserCard = ({ user, userData, openModal, closeModal, showModal, generateUs
       className="card-btn">
       Contact {user.name.first}
     </button>
-    {/* <Modal 
-      userData={userData}
+    <Modal 
+      user={user}
       generateUser={generateUser}
       openModal={openModal}
       closeModal={closeModal}
       showModal={showModal}
-    /> */}
+    />
     </>
   )
 }
