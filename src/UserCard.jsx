@@ -14,7 +14,7 @@ const UserCard = ({ user, userData, generateUser}) => {
   }
 
   return (
-    <>
+    <article className="app-user-card">
     <h3>{user.name.first + " " + user.name.last}</h3>
     <img src={user.picture.large} alt="random user" />
     <a href={user.email}>{user.email}</a>
@@ -30,7 +30,7 @@ const UserCard = ({ user, userData, generateUser}) => {
       closeModal={closeModal}
       showModal={showModal}
     />
-    </>
+    </article>
   )
 }
 

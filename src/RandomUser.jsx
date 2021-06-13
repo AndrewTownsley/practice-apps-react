@@ -26,21 +26,18 @@ const RandomUser = () => {
  
 
   return (
-    <div className="App">
-      <h1 className="app-title">Random User Generator</h1>
+    <div className="app">
+      <h1 className="app-title">Sort / Filter users by age, name</h1>
 
 
       <button onClick={generateUser}>Next User</button>
         {loading ? (<h1>loading...</h1>) : 
-        (<div className="app-user">
+        (<div className="app-user-container">
           {userData.map((user) => {
             return (
-              <UserCard 
-                className="app-user-card"  
+              <UserCard   
                 key={user.login.uuid}
                 user={user}
-                // openModal={openModal}
-                // closeModal={closeModal}
                 userData={userData}
                 generateUser={generateUser}
                 />

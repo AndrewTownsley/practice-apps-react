@@ -11,15 +11,3 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.show-modal {
-  display: block;
-}
-
-.hide-modal {
-  display: none;
-}
-
-.modal-window {
-  outline: 2px solid white;
-}
