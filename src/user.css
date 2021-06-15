@@ -11,7 +11,7 @@
   font-family: "Lato", "Segoe UI", Tahoma, Verdana, sans-serif;
   justify-content: center;
   align-items: center;
-  background: rgb(185, 210, 240);
+  background: rgb(213, 232, 255);
 }
 
 .app-title {
@@ -31,6 +31,7 @@
   flex-direction: column;
   overflow: hidden;
   max-width: 275px;
+  /* max-height: 275px; */
   background: #fff;
   border-radius: 5px;
   /* padding: 2rem; */
@@ -42,7 +43,7 @@
 .user-card-img-bg {
   display: flex;
   justify-content: center;
-  background: rgb(228, 228, 228);
+  background: rgb(245, 245, 245);
   width: 100%;
   height: 100%;
 }
@@ -50,6 +51,7 @@
 .user-card img {
   padding: 1rem 0;
   max-width: 150px;
+  max-height: 150px;
   border-radius: 50%;
 }
 
@@ -62,6 +64,7 @@
   background: #3c7ebe;
   color: #fff;
   font-size: 1rem;
+  align-items: left;
   border: none;
   padding: 8px;
   cursor: pointer;
