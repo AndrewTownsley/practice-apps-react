@@ -14,15 +14,21 @@ const UserCard = ({ user, userData, generateUser}) => {
   }
 
   return (
-    <article className="app-user-card">
-    <h3>{user.name.first + " " + user.name.last}</h3>
-    <img src={user.picture.large} alt="random user" />
-    <a href={user.email}>{user.email}</a>
-    <button 
-    onClick={openModal}
-      className="card-btn">
-      Contact {user.name.first}
-    </button>
+    <article className="user-card">
+      <div className="user-card-img-bg">
+        <img src={user.picture.large} alt="random user" />
+      </div>
+      <div className="user-card-info">
+        <h4>{user.name.first + " " + user.name.last}</h4>
+        <p>membership: {user.dob.age >= 55 ? "Senior" : "Adult"}</p>
+        </div>
+        <button 
+          onClick={openModal}
+          className="user-card-btn">
+          Contact {user.name.first}
+        </button>
+    {/* <a href={user.email}>{user.email}</a> */}
+   
     <Modal 
       user={user}
       generateUser={generateUser}

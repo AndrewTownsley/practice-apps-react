@@ -32,7 +32,7 @@ const RandomUser = () => {
 
       <button onClick={generateUser}>Next User</button>
         {loading ? (<h1>loading...</h1>) : 
-        (<div className="app-user-container">
+        (<div className="user-container">
           {userData.map((user) => {
             return (
               <UserCard   
