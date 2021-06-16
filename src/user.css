@@ -9,13 +9,48 @@ i {
   cursor: pointer;
 }
 
+a {
+  color: #3c7ebe;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #444;
+}
+
 .app {
   min-height: 100vh;
   min-width: 100vw;
   font-family: "Lato", "Segoe UI", Tahoma, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: rgb(255, 255, 255);
+}
+
+.app-header {
+  margin: 2rem 0;
+}
+
+.user-search {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.user-search input {
+  margin-left: 10px;
+  padding: 10px;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.search-btn {
+  font-size: 2rem;
 }
 
 .app-title {

@@ -5,8 +5,8 @@ const Modal = ({ user, showModal, closeModal, userData, setUserData, results}) =
   return (
     <>
       <div className={showModal ? "show-modal" : "hide-modal"}>
-        <div className="modal-wrapper">
-          <div className="modal">
+        <div className="modal-wrapper" onClick={closeModal}>
+          <div className="modal" onClick={(e) => {e.stopPropagation()}}>
             <div className="modal-header">
               <h3>Contact information</h3>
               <button onClick={closeModal}><i className="fas fa-times 2x"></i></button>
